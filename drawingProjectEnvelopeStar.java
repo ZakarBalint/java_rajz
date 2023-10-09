@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.concurrent.TimeUnit;
 
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
@@ -12,25 +13,25 @@ public class drawingProjectEnvelopeStar {
 
     public static void drawSomething(int x, int y ,int size, Graphics graphics) {
 
-
-
         graphics.setColor(Color.black);
+        int meret = 30; //a vonalak száma
+        int reszlet = 8; //a vonalak gyakorisága
 
-        int meret = 50;
-
-
-        int lepes = meret * 10;
+        int lepes = meret * reszlet;
         for(int i = 0; i < meret; i++)
         {
             //1.negyed
-            graphics.drawLine(lepes, 0 + i * 10,   lepes - i * 10, lepes);
+            graphics.drawLine(lepes, 0 + i * reszlet,   lepes - i * reszlet, lepes);
+            
             //2.negyed
-            graphics.drawLine(lepes, lepes - i * 10, 2 * lepes - i * 10, lepes);
+            graphics.drawLine(lepes, lepes - i * reszlet, 2 * lepes - i * reszlet, lepes);
+            
             //3.negyed
-            graphics.drawLine(lepes, 2 * lepes - i * 10, lepes + i * 10, lepes);
+            graphics.drawLine(lepes, 2 * lepes - i * reszlet, lepes + i * reszlet, lepes);
+            
             //4.negyed
-            graphics.drawLine(0 + i * 10, lepes, lepes,  lepes + i * 10);
-        }        
+            graphics.drawLine(0 + i * reszlet, lepes, lepes,  lepes + i * reszlet);
+        }              
     }
 
     // ezt a részt nem kell módosítani
