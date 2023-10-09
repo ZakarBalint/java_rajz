@@ -16,7 +16,7 @@ public class drawingProjectEnvelopeStar {
 
         graphics.setColor(Color.black);
 
-        int meret = 20;
+        int meret = 50;
 
 
         int lepes = meret * 10;
@@ -25,14 +25,12 @@ public class drawingProjectEnvelopeStar {
             //1.negyed
             graphics.drawLine(lepes, 0 + i * 10,   lepes - i * 10, lepes);
             //2.negyed
-            graphics.drawLine(lepes + i * 10, lepes,  lepes, lepes * 2 - i * 10);
+            graphics.drawLine(lepes, lepes - i * 10, 2 * lepes - i * 10, lepes);
             //3.negyed
             graphics.drawLine(lepes, 2 * lepes - i * 10, lepes + i * 10, lepes);
             //4.negyed
             graphics.drawLine(0 + i * 10, lepes, lepes,  lepes + i * 10);
-        }
-        
-
+        }        
     }
 
     // ezt a részt nem kell módosítani
