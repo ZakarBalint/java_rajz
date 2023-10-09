@@ -16,25 +16,22 @@ public class drawingProjectEnvelopeStar {
 
         graphics.setColor(Color.black);
 
-        for(int i = 0; i < 20; i++)
-        {
-            graphics.drawLine(200, 0 + i * 10,   200 - i * 10, 200);
-        }
-        
-        for(int i = 0; i < 20; i++)
-        {
-            graphics.drawLine(0 + i * 10, 200, 200,  200 + i * 10);
-        }
+        int meret = 20;
 
-        for(int i = 0; i < 20; i++)
+
+        int lepes = meret * 10;
+        for(int i = 0; i < meret; i++)
         {
-            graphics.drawLine(200, 0 + i * 10,   200 - i * 10, 200);
+            //1.negyed
+            graphics.drawLine(lepes, 0 + i * 10,   lepes - i * 10, lepes);
+            //2.negyed
+            graphics.drawLine(lepes + i * 10, lepes,  lepes, lepes * 2 - i * 10);
+            //3.negyed
+            graphics.drawLine(lepes, 2 * lepes - i * 10, lepes + i * 10, lepes);
+            //4.negyed
+            graphics.drawLine(0 + i * 10, lepes, lepes,  lepes + i * 10);
         }
         
-        for(int i = 0; i < 20; i++)
-        {
-            graphics.drawLine(0 + i * 10, 200, 200,  200 + i * 10);
-        }
 
     }
 
