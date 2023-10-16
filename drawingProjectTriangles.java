@@ -1,9 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.Scanner;
 
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
-public class drawingProjectEnvelopeStar {
+public class drawingProjectTriangles {
     public static void drawImage(Graphics graphics) {
         int size = WIDTH / 2;
        
@@ -12,25 +13,9 @@ public class drawingProjectEnvelopeStar {
 
     public static void drawSomething(int x, int y ,int size, Graphics graphics) {
 
-        graphics.setColor(Color.black);
-        int meret = 30; //a vonalak száma
-        int reszlet = 8; //a vonalak gyakorisága
+        int triangleSize = 100;
 
-        int lepes = meret * reszlet;
-        for(int i = 0; i < meret; i++)
-        {
-            //1.negyed
-            graphics.drawLine(lepes, 0 + i * reszlet,   lepes - i * reszlet, lepes);
-            
-            //2.negyed
-            graphics.drawLine(lepes, lepes - i * reszlet, 2 * lepes - i * reszlet, lepes);
-            
-            //3.negyed
-            graphics.drawLine(lepes, 2 * lepes - i * reszlet, lepes + i * reszlet, lepes);
-            
-            //4.negyed
-            graphics.drawLine(0 + i * reszlet, lepes, lepes,  lepes + i * reszlet);
-        }              
+        graphics.drawPolygon(null, null, triangleSize);
     }
 
     // ezt a részt nem kell módosítani

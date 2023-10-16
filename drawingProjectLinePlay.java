@@ -3,7 +3,7 @@ import java.awt.*;
 
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
-public class SampleDraw {
+public class drawingProjectLinePlay {
     public static void drawImage(Graphics graphics) {
         int size = WIDTH / 2;
        
