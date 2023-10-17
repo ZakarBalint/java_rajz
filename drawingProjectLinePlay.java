@@ -7,10 +7,10 @@ public class drawingProjectLinePlay {
     public static void drawImage(Graphics graphics) {
         int size = WIDTH / 2;
        
-        drawSomething(0, 0, size, graphics);
+        drawLinePlay(0, 0, size, graphics);
     }
 
-    public static void drawSomething(int x, int y ,int size, Graphics graphics) {
+    public static void drawLinePlay(int x, int y ,int size, Graphics graphics) {
 
 
 

@@ -7,10 +7,10 @@ public class drawingProjectEnvelopeStar {
     public static void drawImage(Graphics graphics) {
         int size = WIDTH / 2;
        
-        drawSomething(0, 0, size, graphics);
+        drawEnvelopeStar(0, 0, size, graphics);
     }
 
-    public static void drawSomething(int x, int y ,int size, Graphics graphics) {
+    public static void drawEnvelopeStar(int x, int y ,int size, Graphics graphics) {
 
         graphics.setColor(Color.black);
         int meret = 30; //a vonalak száma
